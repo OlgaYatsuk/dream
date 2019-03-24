@@ -1,6 +1,10 @@
 .corporative__item {
-  height: calc(100vh - 350px);
+  height: 300px;
   object-fit: cover;
-  width: 351px;
-  max-width: 351px;
+
+  @media screen and (min-width: $max-md){
+    height: calc(100vh - 350px);
+    width: 351px;
+    max-width: 351px;
+  }
 }

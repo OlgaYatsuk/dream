@@ -4,9 +4,9 @@
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   background-size: cover;
-  width: 270px;
-  height: 48px;
-  font-size: 0.875rem;
+  width: 190px;
+  height: 35px;
+  font-size: 12px;
   text-align: center;
   padding: 9px 0;
   margin-top: 30px;
@@ -18,23 +18,40 @@
   transition: box-shadow 0.15s;
   cursor: pointer;
 
+  @media screen and (min-width: $max-md) {
+    width: 270px;
+    height: 48px;
+    font-size: 0.875rem;
+  }
+
   &:hover {
     box-shadow:  4px 4px 30px rgba(#DAA700, 0.8);
   }
 }
 
 .button--big {
-  width: 364px;
-  font-size: 1.125rem;
-  padding: 14px 0;
+  width: 250px;
+  font-size: 1rem;
+  padding: 16px 0;
+  height: 48px;
+
+  @media screen and (min-width: $max-md) {
+    width: 364px;
+    padding: 14px 0;
+    font-size: 1.125rem;
+  }
 }
 
 .button--transparent {
-  margin-top: 0;
   border: 2px solid $black;
   background: none;
   transition: all 0.2s;
   cursor: pointer;
+  margin-left: auto;
+
+  @media screen and (min-width: $max-md) {
+    margin-top: 0;
+  }
 
   &:hover {
     background: $white;
@@ -43,8 +60,13 @@
 }
 
 .button--proposal {
+  margin-top: 30px;
+  //margin-right: 40px;
   margin-left: auto;
-  margin-top: 0;
+
+  @media screen and (min-width: $max-md) {
+    margin-top: 0;
+  }
 }
 
 .button--footer {

@@ -2,13 +2,29 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 120px;
+  bottom: -76vh;
+  max-width: 100px;
+  position: absolute;
+
+  @media screen and (min-width: $max-md) {
+    position: static;
+    max-width: 120px;
+  }
+}
+
+.social--footer {
+  bottom: -10px;
 }
 
 .social__link {
-  width: 28px;
-  height: 28px;
+  width: 23px;
+  height: 23px;
   transition: transform 0.2s;
+
+  @media screen and (min-width: $max-md) {
+    width: 28px;
+    height: 28px;
+  }
 
   &:hover {
     transform: scale(1.2);

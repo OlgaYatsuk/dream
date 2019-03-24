@@ -1,15 +1,38 @@
 .header {
-  padding: 20px 55px 0;
-  position: absolute;
+  padding: 20px 20px 0;
   width: 100%;
   top: 0;
   z-index: 2;
+
+  @media screen and (min-width: $max-md) {
+    padding: 20px 55px 0;
+    position: absolute;
+  }
 }
 
 .header-proposal {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  position: absolute;
+  top: 30px;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: calc(100% - 40px);
+
+  .heading {
+    width: 100%;
+    margin-top: 20px;
+
+    @media screen and (min-width: $max-md){
+      margin: 0;
+    }
+  }
+
+  @media screen and (min-width: $max-md) {
+    position: static;
+    align-items: baseline;
+    flex-direction: row;
+  }
 }
 
 .header-top {
@@ -17,9 +40,13 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   height: 95px;
   padding: 40px 0;
+
+  @media screen and (min-width: $max-lg){
+    margin: 0 auto;
+  }
 }
 
 .header--black {

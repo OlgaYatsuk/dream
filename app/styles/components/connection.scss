@@ -1,21 +1,31 @@
 .connection {
   position: fixed;
-  bottom: 30px;
-  right: 56px;
+  bottom: 20px;
+  right: 20px;
   z-index: 1;
+
+  @media screen and (min-width: $max-md) {
+    right: 56px;
+    bottom: 30px;
+  }
 }
 
 .connection__btn {
   background: $white url("../images/connection/viber.svg") no-repeat center;
   background-size: 42px 42px;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   padding: 14px;
   border-radius: 50%;
   outline: 0;
   cursor: pointer;
   animation: pulse 2.4s infinite;
   transition: box-shadow 4s, transform 0.2s;
+
+  @media screen and (min-width: $max-md) {
+    width: 70px;
+    height: 70px;
+  }
 
   &:hover {
     transform: scale(1.1);

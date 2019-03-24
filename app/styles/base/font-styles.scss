@@ -1,12 +1,16 @@
 .heading {
   font-family: 'Lora', serif;
   font-style: normal;
-  font-size: 3rem;
   color: $black;
   line-height: 1.15;
   max-width: 550px;
   letter-spacing: 2px;
   font-weight: 300;
+  font-size: 2rem;
+
+  @media screen and (min-width: $max-md) {
+    font-size: 3rem;
+  }
 }
 
 .heading--white {
@@ -14,15 +18,19 @@
 }
 
 .heading--big {
-  font-size: 4.5rem;
-}
-
-.heading--medium {
   font-size: 3rem;
+
+  @media screen and (min-width: $max-md) {
+    font-size: 4.5rem;
+  }
 }
 
 .heading--hero {
-  margin-top: 92px;
+  margin-top: 63px;
+
+  @media screen and (min-width: $max-md) {
+    margin-top: 92px;
+  }
 }
 
 .heading--wide {

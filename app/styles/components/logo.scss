@@ -1,11 +1,21 @@
 .logo {
   position: absolute;
   top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  max-width: 68px;
+
+  @media screen and (min-width: $max-lg){
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+  }
 }
 
 .logo--footer {
-  left: 37%;
+  left: 40%;
   top: -25px;
+
+  @media screen and (min-width: $max-lg){
+    left: 42%;
+  }
 }

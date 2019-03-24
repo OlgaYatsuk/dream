@@ -173,8 +173,8 @@
     }
 
     $.fn.moveTo = function(page_index) {
-      current = $(settings.sectionContainer + ".active")
-      next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
+      let current = $(settings.sectionContainer + ".active")
+      let next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
       if(next.length > 0) {
         if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
         current.removeClass("active")
@@ -184,7 +184,7 @@
         $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
         $("body").addClass("viewing-page-"+next.data("index"))
 
-        pos = ((page_index - 1) * 100) * -1;
+        let pos = ((page_index - 1) * 100) * -1;
 
         if (history.replaceState && settings.updateURL == true) {
           var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (page_index - 1);
@@ -192,6 +192,13 @@
         }
         el.transformPage(settings, pos, page_index);
       }
+    }
+
+    $('.js-scroll').on('click', getIndex);
+    function getIndex(e) {
+
+      e.preventDefault();
+      $.fn.moveTo($(this).attr('href'))
     }
 
     function init_scroll(event, delta) {
@@ -257,14 +264,14 @@
     }
 
     if(window.location.hash != "" && window.location.hash != "#1") {
-      init_index =  window.location.hash.replace("#", "")
-
+      let init_index =  window.location.hash.replace("#", "")
       if (parseInt(init_index) <= total && parseInt(init_index) > 0) {
+        // const top = $(id).offset().top;
         $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
         $("body").addClass("viewing-page-"+ init_index)
         if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
 
-        next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
+        let next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
         if(next) {
           next.addClass("active")
           if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
@@ -275,7 +282,7 @@
             history.pushState( {}, document.title, href );
           }
         }
-        pos = ((init_index - 1) * 100) * -1;
+        let pos = ((init_index - 1) * 100) * -1;
         el.transformPage(settings, pos, init_index);
       } else {
         $(settings.sectionContainer + "[data-index='1']").addClass("active")

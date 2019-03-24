@@ -1,10 +1,12 @@
 @keyframes scale {
   0% {
-    transform: scale(1.8) translateX(-80px);
+    transform: scale(1.4) translateX(-20px);
+    opacity: 0.5;
   }
 
   100% {
     transform: scale(1) translateX(0);
+    opacity: 1;
   }
 }
 
@@ -20,17 +22,28 @@
 
 @keyframes transform {
   0% {
-    transform: translateX(110%) scale(0);
+    transform: translateX(20px) scale(0.9);
+    opacity: 0.3;
+  }
+
+  70% {
+    opacity: 1;
   }
 
   100% {
     transform: translateX(0) scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes transformRight {
   0% {
-    transform: translateX(-110%) scale(0);
+    transform: translateX(-20px) scale(0.9);
+    opacity: 0.3;
+  }
+
+  70% {
+    opacity: 1;
   }
 
   100% {
@@ -40,8 +53,8 @@
 
 @keyframes transformTop {
   0% {
-    transform: translateY(150%);
-    opacity: 0;
+    transform: translateY(150px);
+    opacity: 0.2;
   }
 
   100% {

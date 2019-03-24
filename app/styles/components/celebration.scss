@@ -2,33 +2,60 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: $max-lg) {
+    margin-top: 200px;
+    padding-bottom: 0;
+    flex-wrap: nowrap;
+  }
 }
 
 .celebration__item {
-  min-width: 20vw;
-  min-height: calc(20vw);
-  height: calc(20vw);
+  height: 150px;
+  margin: 30px 40px 0;
+  width: 100%;
   position: relative;
   cursor: pointer;
   display: block;
   color: $black;
-  mask: url("../images/mask.svg") no-repeat;
-  mask-size: cover;
   transform-origin: left;
   transform: scale(1);
+  border-radius: 10px;
   transition: transform 0.2s;
+  overflow: hidden;
+
+  @media screen and (min-width: $max-lg) {
+    mask: url("../images/mask.svg") no-repeat;
+    mask-size: cover;
+    min-width: 20vw;
+    min-height: calc(20vw);
+    height: calc(20vw);
+    border-radius: 0;
+    margin: 0;
+  }
 
   &::before {
     content: '';
     position: absolute;
-    width: calc(10vw);
-    height: calc(10vw);
-    border: 1px solid $white;
-    left: 50%;
-    transform-origin: center;
-    top: 50%;
-    transform: rotate(45deg) translate(-69%, 0%);
+    background: rgba($black, 0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 0;
+
+    @media screen and (min-width: $max-md){
+      width: calc(10vw);
+      height: calc(10vw);
+      border: 1px solid $white;
+      left: 50%;
+      transform-origin: center;
+      top: 50%;
+      background: none;
+      transform: rotate(45deg) translate(-69%, 0%);
+    }
   }
 
   &:first-child:hover {
@@ -52,6 +79,7 @@
       opacity: 1;
     }
   }
+
 }
 
 .celebration__img {
@@ -63,18 +91,23 @@
 
 .celebration__caption {
   position: absolute;
-  opacity: 0;
   background-color: $white;
   border-radius: 5px;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   cursor: pointer;
   font-family: 'Lora', serif;
   text-align: center;
   width: max-content;
+  z-index: 1;
   max-width: 200px;
   padding: 4px 15px;
   transition: opacity 0.3s;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+
+  @media screen and (min-width: $max-lg) {
+    opacity: 0;
+    font-size: 1.125rem;
+  }
 }

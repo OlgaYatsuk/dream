@@ -1,14 +1,18 @@
 .slider {
-  max-width: 100%;
-  //overflow-x: hidden;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $max-md){
+    overflow: visible;
+  }
 }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   z-index: 2;
   border: 0;
@@ -16,27 +20,40 @@
   outline: 0;
   transition: transform 0.2s;
 
+  @media screen and (min-width: $max-md){
+    width: 70px;
+    height: 70px;
+  }
+
   &:hover {
     transform: translateY(-50%) scale(1.2);
   }
 }
 
 .arrow--next {
-  right: 56px;
-  background: url('../images/icons/arrow-next.svg') no-repeat center;
+  right: 30px;
+  background: url('../images/icons/arrow-right.svg') no-repeat center;
   background-size: cover;
+
+  @media screen and (min-width: $max-md){
+    right: 56px;
+  }
 }
 
 .arrow--prev {
-  left: 56px;
-  background: url('../images/icons/arrow-prev.svg') no-repeat center;
+  left: 30px;
+  background: url('../images/icons/arrow-left.svg') no-repeat center;
   background-size: cover;
+
+  @media screen and (min-width: $max-md){
+    left: 56px;
+  }
 }
 
 .slider--centered {
   display: block;
-  margin-top: 15vh;
-  height: 348px;
+  margin-top: 120px;
+  height: 300px;
 
   .slick-list {
     overflow: visible!important;
@@ -46,25 +63,57 @@
     transition: transform 0.5s;
     margin: 0 40px;
   }
+
+  @media screen and (min-width: $max-md){
+    margin-top: 15vh;
+    height: 348px;
+  }
 }
 
 .slider--corporative {
-  height: calc(100vh - 350px);
-  margin-top: calc(100vh - (100vh - 352px));
+  height: 350px;
+  margin-top: 50px;
 
   .slick-slide {
-    width: 351px;
-    max-width: 351px;
-    margin-right: 40px;
+    height: 350px;
+    width: 100vw;
+
+    @media screen and (min-width: $max-md){
+      margin-right: 40px;
+      width: 351px;
+      height: calc(100vh - 350px);
+      max-width: 351px;
+    }
+  }
+
+  @media screen and (min-width: $max-md){
     height: calc(100vh - 350px);
+    margin-top: calc(100vh - (100vh - 352px));
   }
 }
 
 .slider--wedding {
+  height: 350px;
   width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
   position: relative;
+  overflow-y: hidden;
+
+  .wedding__item {
+    object-fit: cover;
+    height: 350px;
+    width: auto;
+
+    @media screen and (min-width: $max-md){
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  @media screen and (min-width: $max-md){
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+  }
 
   &::before {
     content: '';
@@ -74,7 +123,12 @@
     width: 100%;
     height: 70%;
     z-index: 1;
+    display: none;
     background: linear-gradient(rgba($white, 0.8) 20%, transparent);
+
+    @media screen and (min-width: $max-md){
+      display: block;
+    }
   }
 }
 
@@ -95,8 +149,12 @@
 
 .slider-centered__item {
   width: 35vw;
-  height: 400px;
+  height: 250px;
   object-fit: cover;
+
+  @media screen and (min-width: $max-md){
+    height: 400px;
+  }
 }
 
 .slick-center {
