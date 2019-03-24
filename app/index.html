@@ -10,28 +10,12 @@
 
   <!-- build:css styles/vendor.css -->
   <link rel="stylesheet" href="/node_modules/slick-carousel/slick/slick.css" />
-
   <!-- bower:css -->
-  <!--<link rel="stylesheet" href="/bower_components/onepage-scroll/onepage-scroll.css" />-->
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
-  <!--<link rel="stylesheet" href="https://js.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />-->
-
-  <!--<link rel="stylesheet" type="text/css" href="fullpage.css" />-->
-
-  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
-  <!--<script src="vendors/easings.min.js"></script>-->
-
-
-  <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
-  <!--<script type="text/javascript" src="vendors/scrolloverflow.min.js"></script>-->
-
-  <!--<script type="text/javascript" src="fullpage.js"></script>-->
-  <!-- endbuild -->
-
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
@@ -64,8 +48,7 @@
     </div>
   </section>
 
-  <section class="screen screen--black" id="celebration" data-index="celebration">
-    <canvas class="space"></canvas>
+  <section class="screen screen--celebration screen--black" id="celebration" data-index="celebration">
     <header class="header">
       <div class="header-top">
         <img src="./images/icons/logo.svg" alt="Dream big" class="logo">
@@ -207,7 +190,7 @@
       <img src="images/children/bd-1.png" class="slider-centered__item">
     </div>
   </section>
-  <section class="screen screen--black footer" data-index="order" id="order">
+  <section class="screen screen--footer screen--black footer" data-index="order" id="order">
     <div class="container">
       <div class="header-proposal">
         <h1 class="heading heading--white heading--wide heading--medium">Получить предложение по празднику</h1>
@@ -272,10 +255,12 @@
 <!-- build:js scripts/vendor.js -->
 <!--<script src="scripts/fullpage.min.js"></script>-->
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/scripts/jquery.onepage-scroll.js"></script>
 <script src="/node_modules/slick-carousel/slick/slick.js"></script>
+
 <!-- bower:js -->
 <!--<script src="/bower_components/jquery/dist/jquery.js"></script>-->
-<script src="/bower_components/modernizr/modernizr.js"></script>
+<!--<script src="/bower_components/modernizr/modernizr.js"></script>-->
 <!--<script src="/bower_components/onepage-scroll/jquery.onepage-scroll.js"></script>-->
 <!-- endbower -->
 <!-- endbuild -->

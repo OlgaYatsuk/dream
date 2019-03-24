@@ -7,6 +7,12 @@
     height: 100vh;
     overflow: hidden;
   }
+
+  //&.active {
+  //  .heading {
+  //    animation: scale 1s ease-in-out;
+  //  }
+  //}
 }
 
 .screen--hero {
@@ -33,4 +39,48 @@
 .screen--children {
   background: url("../images/children-bg.png") no-repeat center;
   background-size: cover;
+}
+
+.screen--celebration {
+  &.active {
+    .celebration__item {
+      animation: scale 1.5s ease-out;
+    }
+  }
+}
+.screen--corporative {
+  &.active {
+    .slider--corporative {
+      animation: transformTop 1s ease-in-out;
+    }
+  }
+}
+
+.screen--children,
+.screen--adult {
+  &.active {
+    .slider--centered {
+      animation: transform 1.5s ease-out;
+    }
+  }
+}
+
+.screen--festival {
+  &.active {
+    .slider--centered {
+      animation: transformRight 1.5s ease-out;
+    }
+  }
+}
+
+.screen--footer.active {
+  .footer__text {
+    animation: transformRight 1.3s ease-in-out;
+  }
+}
+
+.screen--wedding.active {
+  .slider {
+    animation: opacity 2s ease-in-out;
+  }
 }

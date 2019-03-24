@@ -19,10 +19,6 @@
   transform: scale(1);
   transition: transform 0.2s;
 
-  &.is-inview {
-    animation: scale 1.5s ease-in-out 0.5s;
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -55,16 +51,6 @@
     .celebration__caption {
       opacity: 1;
     }
-  }
-}
-
-@keyframes scale {
-  0% {
-    transform: scale(1.5) translateX(-40px);
-  }
-
-  100% {
-    transform: scale(1) translateX(0);
   }
 }
 

@@ -14,7 +14,8 @@
   border-radius: 50%;
   outline: 0;
   cursor: pointer;
-  transition: box-shadow 0.2s, transform 0.2s;
+  animation: pulse 2.4s infinite;
+  transition: box-shadow 4s, transform 0.2s;
 
   &:hover {
     transform: scale(1.1);
@@ -93,3 +94,19 @@
   background-size: 41px 41px;
 }
 
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(248, 243, 255, 0.4);
+    transform: scale(1.1);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    transform: scale(1);
+  }
+}

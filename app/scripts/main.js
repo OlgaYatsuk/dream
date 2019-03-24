@@ -20,14 +20,14 @@ $(function () {
 });
 
 $(function () {
- $('.js-birthday-slider').slick({
-   centerMode: true,
-   slidesToShow: 3,
-   focusOnSelect: true,
-   centerPadding: 200,
-   nextArrow: '<button class="arrow arrow--next"></button>',
-   prevArrow: '<button class="arrow arrow--prev"></button>'
- });
+  $('.js-birthday-slider').slick({
+    centerMode: true,
+    slidesToShow: 3,
+    focusOnSelect: true,
+    centerPadding: 200,
+    nextArrow: '<button class="arrow arrow--next"></button>',
+    prevArrow: '<button class="arrow arrow--prev"></button>'
+  });
 
   $('.js-corporative-slider').slick({
     slidesToShow: 4,
@@ -77,7 +77,7 @@ $(function () {
 });
 
 // $(function () {
-//   $('body').on('scroll', animateElements);
+//   $('window').on('scroll', animateElements);
 //
 //   function animateElements() {
 //     console.log("cd");
@@ -240,14 +240,13 @@ $(function () {
 //
 // });
 
-// $(document).ready();
-// if ($(window).width() > 1024) {
-//   $('.js-init-scroll').onepage_scroll({
-//     // sectionContainer: '.js-scroll-section',
-//     updateUrl: true,
-//     easing: 'ease',
-//     animationTime: 1000,
-//     loop: false,
-//     keyboard: true
-//   });
-// }
+if ($(window).width() > 1024) {
+  $('.js-init-scroll').onepage_scroll({
+    updateUrl: true,
+    easing: 'ease',
+    animationTime: 1000,
+    loop: false,
+    keyboard: true,
+    pagination: false
+  })
+}
