@@ -1,0 +1,33 @@
+.header {
+  padding: 20px 55px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.header-proposal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  height: 95px;
+  padding: 40px 0;
+}
+
+.header--black {
+  .phone {
+    color: $black;
+
+    &::before {
+      filter: brightness(0);
+    }
+  }
+}

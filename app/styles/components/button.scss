@@ -1,0 +1,52 @@
+.button {
+  display: block;
+  background: url("../images/btn-bg.svg") no-repeat center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  background-size: cover;
+  width: 270px;
+  height: 48px;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 9px 0;
+  margin-top: 30px;
+  color: $black;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 0;
+  line-height: 1;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow:  4px 4px 30px rgba(#DAA700, 0.8);
+  }
+}
+
+.button--big {
+  width: 364px;
+  font-size: 1.125rem;
+  padding: 14px 0;
+}
+
+.button--transparent {
+  margin-top: 0;
+  border: 2px solid $black;
+  background: none;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background: $white;
+    box-shadow: none;
+  }
+}
+
+.button--proposal {
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.button--footer {
+  margin: 5vh 0;
+}

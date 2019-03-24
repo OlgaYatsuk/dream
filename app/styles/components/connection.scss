@@ -1,0 +1,95 @@
+.connection {
+  position: fixed;
+  bottom: 30px;
+  right: 56px;
+  z-index: 1;
+}
+
+.connection__btn {
+  background: $white url("../images/connection/viber.svg") no-repeat center;
+  background-size: 42px 42px;
+  width: 70px;
+  height: 70px;
+  padding: 14px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active,
+  &:focus,
+  &.is-active {
+    box-shadow: 0 0 20px rgba($white, 0.8);
+  }
+}
+
+.connection__menu {
+  position: absolute;
+  transform: scale(0);
+  background: $white;
+  bottom: 130%;
+  right: 0;
+  padding: 25px;
+  border-radius: 10px;
+  z-index: 2;
+  transform-origin: bottom;
+  transition: transform 0.5s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: $white;
+    width: 25px;
+    height: 25px;
+    transform: rotate(45deg);
+    bottom: -5px;
+    right: 40px;
+  }
+
+  &.is-visible {
+    transform: scale(1);
+  }
+}
+
+.connection__item {
+  display: block;
+  color: $black;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-left: 60px;
+  padding-top: 8px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.connection__item--messenger {
+  background: url("../images/connection/messenger.svg") no-repeat;
+  background-size: 41px 41px;
+}
+
+.connection__item--viber {
+  background: url("../images/connection/viber.svg") no-repeat;
+  background-size: 41px 41px;
+}
+
+.connection__item--email {
+  background: url("../images/connection/email.svg") no-repeat;
+  background-size: 41px 41px;
+}
+
+.connection__item--telegram {
+  background: url("../images/connection/telegram.svg") no-repeat;
+  background-size: 41px 41px;
+}
+

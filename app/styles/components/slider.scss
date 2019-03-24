@@ -1,0 +1,104 @@
+.slider {
+  max-width: 100%;
+  //overflow-x: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  z-index: 2;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.2);
+  }
+}
+
+.arrow--next {
+  right: 56px;
+  background: url('../images/icons/arrow-next.svg') no-repeat center;
+  background-size: cover;
+}
+
+.arrow--prev {
+  left: 56px;
+  background: url('../images/icons/arrow-prev.svg') no-repeat center;
+  background-size: cover;
+}
+
+.slider--centered {
+  display: block;
+  margin-top: 15vh;
+  height: 348px;
+
+  .slick-list {
+    overflow: visible!important;
+  }
+
+  .slick-slide {
+    transition: transform 0.5s;
+    margin: 0 40px;
+  }
+}
+
+.slider--corporative {
+  height: calc(100vh - 350px);
+  margin-top: calc(100vh - (100vh - 352px));
+
+  .slick-slide {
+    width: 351px;
+    max-width: 351px;
+    margin-right: 40px;
+    height: calc(100vh - 350px);
+  }
+}
+
+.slider--wedding {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 1;
+    background: linear-gradient(rgba($white, 0.8) 20%, transparent);
+  }
+}
+
+.slider--festival {
+  margin-top: 2vh;
+
+  .slick-slide:nth-child(odd) {
+    width: 100%;
+    max-width: 770px!important;
+    margin-right: 30px;
+  }
+
+  .slick-slide:nth-child(even) {
+    width: 100%;
+    max-width: 370px!important;
+  }
+}
+
+.slider-centered__item {
+  width: 35vw;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slick-center {
+  transform: scale(1.2);
+}

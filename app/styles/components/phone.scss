@@ -1,0 +1,33 @@
+.phone {
+  color: $white;
+  font-size: 1.5rem;
+  margin-top: 35px;
+  display: block;
+  transition: 0.2s;
+  width: max-content;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.phone--white {
+  color: $white;
+}
+
+.phone--header {
+  position: relative;
+  margin-top: 0;
+  margin-left: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -28px;
+    background: url("../images/icons/phone.svg") no-repeat center;
+    width: 18px;
+    height: 18px;
+  }
+}
+

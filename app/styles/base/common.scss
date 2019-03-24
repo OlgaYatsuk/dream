@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $black;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif!important;
+  font-weight: normal;
+
+  &.is-static {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+section {
+  height: 100vh;
+}
+
+.main {
+  touch-action: none;
+}
